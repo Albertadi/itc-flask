@@ -21,3 +21,32 @@ python -m venv venv
 (venv) python task1.py
 ```
 # Send POST, GET, DELETE, and PUT requests using POSTMAN
+Tested requests:
+POST:
+  /todos
+    {
+      "title": "title 1",
+      "description": "example"
+    }
+GET:
+  /todos (with no query)
+  /todos
+    {
+      "completed": true
+    }
+  /todos
+    {
+      "completed": false
+    }
+  /todos/1 (with no query)
+PUT:
+  /todos/1
+  {
+    "title": "title 1",
+    "description": "updated",
+    "completed": true
+  }
+DELETE:
+  /todos/1 (with no query)
+
+      
