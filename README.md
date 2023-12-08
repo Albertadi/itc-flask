@@ -32,29 +32,31 @@ python -m venv venv
 ```
 ### GET:
 ```
-  /todos (with no query)
-  /todos
-    {
-      "completed": true
-    }
-  /todos
-    {
-      "completed": false
-    }
-  /todos/1 (with no query)
+/todos (with no query)
+
+/todos
+{
+  "completed": true
+}
+
+/todos
+{
+  "completed": false
+}
+/todos/1 (with no query)
 ```
 ### PUT:
 ```
-  /todos/1
-  {
-    "title": "title 1",
-    "description": "updated",
-    "completed": true
-  }
+/todos/1
+{
+  "title": "title 1",
+  "description": "updated",
+  "completed": true
+}
 ```
 ### DELETE:
 ```
-  /todos/1 (with no query)
+/todos/1 (with no query)
 ```
 
       
