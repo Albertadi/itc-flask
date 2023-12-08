@@ -21,8 +21,8 @@ python -m venv venv
 (venv) python task1.py
 ```
 # Send POST, GET, DELETE, and PUT requests using POSTMAN
-#Tested requests:
-#POST:
+## Tested requests:
+### POST:
 ```
   /todos
     {
@@ -30,7 +30,7 @@ python -m venv venv
       "description": "example"
     }
 ```
-#GET:
+### GET:
 ```
   /todos (with no query)
   /todos
@@ -43,7 +43,7 @@ python -m venv venv
     }
   /todos/1 (with no query)
 ```
-#PUT:
+### PUT:
 ```
   /todos/1
   {
@@ -52,7 +52,7 @@ python -m venv venv
     "completed": true
   }
 ```
-#DELETE:
+### DELETE:
 ```
   /todos/1 (with no query)
 ```
