@@ -20,4 +20,4 @@ python -m venv venv
 ```
 (venv) python task1.py
 ```
-# Send POST, GET, DELETE, and PUT methods using POSTMAN
+# Send POST, GET, DELETE, and PUT requests using POSTMAN
