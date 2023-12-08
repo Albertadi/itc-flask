@@ -43,6 +43,7 @@ python -m venv venv
 {
   "completed": false
 }
+
 /todos/1 (with no query)
 ```
 ### PUT:
