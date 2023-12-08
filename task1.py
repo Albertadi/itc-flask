@@ -51,8 +51,17 @@ def main():
             # Handle exceptions during database operations
             return 'There was an issue adding your task'
     else:
-        # Retrieve and return all tasks in JSON format
-        tasks = Todo.query.order_by(Todo.createdAt).all()
+        # Attempt to retrieve JSON data from the request
+        json_data = request.get_json(silent=True)
+
+        if json_data and 'completed' in json_data:
+            # If JSON data is provided and contains 'completed' 
+            completed_bool = json_data['completed']
+            tasks = Todo.query.filter_by(completed=completed_bool).order_by(Todo.createdAt).all()
+        else:
+            # If no JSON data is provided or 'completed' is missing, return all tasks
+            tasks = Todo.query.order_by(Todo.createdAt).all()
+
         return jsonify(tasks)
 
 @app.route('/todos/<int:id>', methods=['GET', 'DELETE', 'PUT'])
